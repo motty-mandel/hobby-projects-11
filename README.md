@@ -34,7 +34,7 @@ on your local server.
 
 
 ## Credits
-Help and source code came from the Rutgers bootcamp TA's.
+Help and source code came from the Rutgers bootcamp TA's as well as ChatGPT.
 
 ## License
 Please reference the repo.
