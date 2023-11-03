@@ -1,4 +1,4 @@
-const { User, Application } = require('../models');
+const { User } = require('../models');
 
 module.exports = {
   // Get all users
@@ -8,6 +8,7 @@ module.exports = {
       res.json(users);
     } catch (err) {
       res.status(500).json(err);
+      console.log('Not working');
     }
   },
   // Get a single user
