@@ -27,12 +27,12 @@ const userSchema = new Schema(
       },
     ],
     // Array of id values referencing the user model(self-reference)
-    // friends: [
-    //   {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'user',
-    //   },
-    // ],
+    friends: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'user',
+      },
+    ],
   },
   {
     toJSON: {
@@ -49,6 +49,6 @@ userSchema.virtual('frindCount')
   });
 
 // Initialize our User model
-const User = model('user', userSchema);
+const User = model('User', userSchema);
 
 module.exports = User;
