@@ -29,7 +29,8 @@ module.exports = {
   // create a new user
   async createUser(req, res) {
     try {
-      const user = await User.create(req.body);
+      const user = await User.create(req.body)
+      .select('-__v');
       res.json(user);
     } catch (err) {
       res.status(500).json(err);
@@ -43,9 +44,6 @@ module.exports = {
       if (!user) {
         return res.status(404).json({ message: 'No user with that ID' });
       }
-
-      await Application.deleteMany({ _id: { $in: user.applications } });
-      res.json({ message: 'User and associated apps deleted!' })
     } catch (err) {
       res.status(500).json(err);
     }

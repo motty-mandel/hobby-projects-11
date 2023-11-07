@@ -47,7 +47,7 @@ const thoughtSchema = new Schema(
             required: true,
             ref: 'User',
         },
-
+        // Do I have to seed this reaction schema in the seed file
         reactions: [], //reactionSchema
     },
     {
